@@ -1,0 +1,39 @@
+{
+  "protocol": {
+    "lookback": 336,
+    "horizon": 96,
+    "normalization": "train-only z-score",
+    "splits": "ETT 12/4/4 months; Weather chronological"
+  },
+  "ett_seed42": {
+    "ETTh1": {
+      "mse": 0.4508,
+      "mae": 0.5024
+    },
+    "ETTh2": {
+      "mse": 0.3884,
+      "mae": 0.4596
+    },
+    "ETTm1": {
+      "mse": 0.4163,
+      "mae": 0.4867
+    },
+    "ETTm2": {
+      "mse": 0.4488,
+      "mae": 0.4404
+    }
+  },
+  "weather_hierarchy_vs_matched_flat": {
+    "lr_1e-3_3seeds": {
+      "full_mse": 0.158559,
+      "matched_flat_mse": 0.159304,
+      "claim_success": false
+    },
+    "lr_3e-4_3seeds": {
+      "full_mse": 0.16014,
+      "matched_flat_mse": 0.158048,
+      "claim_success": false,
+      "note": "mse_win=False mae_win=False gate_collapsed=True trained_past_epoch1=False"
+    }
+  }
+}
